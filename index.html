@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+<style>
+
+
+body{
+  background-image: url(imagens/tauleiro.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+ul {
+  border: 2px solid white; 
+  border-radius: 10px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  text-align: center; 
+}
+
+li {
+  display: inline-block; 
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: rgb(150, 36, 36);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+
+}
+
+.active {
+  background-color: white;
+}
+
+.carta1 {
+  width: 400px;
+  height: 300px;
+  background: url(imagens/Guerreiro.jfif); 
+  background-size: cover;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 5px solid blue; 
+  border-radius: 10px;
+  overflow: hidden; 
+  position: relative;
+}
+
+.carta1:hover {
+  width: 700px;
+  height: 500px;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  visibility: hidden;
+}
+
+.carta1:hover .video-background {
+  visibility: visible;
+}
+
+.carta2 {
+  width: 400px;
+  height: 300px;
+  background: url(imagens/maga.jfif); 
+  background-size: cover;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 5px solid purple; 
+  border-radius: 10px;
+  overflow: hidden; 
+  position: relative;
+}
+
+.carta2:hover {
+  width: 700px;
+  height: 500px;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  visibility: hidden; 
+}
+
+.carta2:hover .video-background {
+  visibility: visible; /* O vídeo é exibido quando o mouse passa sobre a carta */
+}
+
+.carta3 {
+  width: 400px;
+  height: 300px;
+  background: url(imagens/healing.jfif); /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 5px solid green; 
+  border-radius: 10px;
+  overflow: hidden; /* Isso garante que o vídeo não ultrapasse a div */
+  position: relative; /* Isso permite que você posicione o vídeo absolutamente */
+}
+
+.carta3:hover {
+  width: 700px;
+  height: 500px;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Isso garante que o vídeo cubra toda a div */
+  visibility: hidden; /* O vídeo é ocultado por padrão */
+}
+
+.carta3:hover .video-background {
+  visibility: visible; /* O vídeo é exibido quando o mouse passa sobre a carta */
+}
+
+.carta4 {
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arqueira.jfif); /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 5px solid yellow; 
+  border-radius: 10px;
+  overflow: hidden; /* Isso garante que o vídeo não ultrapasse a div */
+  position: relative; /* Isso permite que você posicione o vídeo absolutamente */
+}
+
+.carta4:hover {
+  width: 700px;
+  height: 500px;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  visibility: hidden; 
+}
+
+.carta4:hover .video-background {
+  visibility: visible; 
+}
+
+.card-info {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 15px;
+  background-image: linear-gradient(90deg, #020024 0%, darkblue 35%, blue 100%);
+  border: 2px solid #555; 
+  border-radius: 50px; 
+  padding: 20px;
+  width: 300px;
+}
+
+.card-info2{
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10px;
+  background-image: linear-gradient(90deg, #020024 0%, rgb(56, 3, 56) 35%, purple 100%);
+  border: 2px solid #555; 
+  border-radius: 50px; 
+  padding: 20px;
+  width: 300px;
+}
+
+.card-info3{
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10px;
+  background-image: linear-gradient(90deg, #020024 0%, rgb(6, 57, 6) 35%, green 100%);
+  border: 2px solid #555; 
+  border-radius: 50px; 
+  padding: 20px;
+  width: 300px;
+}
+
+.card-info4{
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10px;
+  background-image: linear-gradient(90deg, #020024 0%, rgb(80, 80, 16) 35%, yellow 100%);
+  border: 2px solid #555; 
+  border-radius: 50px; 
+  padding: 20px;
+  width: 300px;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 350px;
+}
+h1{
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: #020024;
+}
+
+@media screen and (max-width: 500px) {
+  .card, .card2, .card3, .arma, .arma2 {
+  width: 300px;
+  height: 200px;
+ }
+ .card:hover, .card2:hover, .card3:hover, .arma:hover, .arma2:hover {
+    width: 50px;
+    height: 30px;
+  }
+  body {
+    background-image: url(imagens/Guerreiromobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  ul {
+  border: 2px solid white; 
+  border-radius: 10px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  text-align: center; 
+}
+}
+
+</style>
+</head>
+<body>
+
+<table   border="0" cellspacing="2mm" aria-colspan="2" style="margin: auto; auto;">
+
+  <ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="guerreiro.html" style="color: blue;">Guerreiro</a></li>
+    <li><a href="maga.html" style="color: purple;">Maga</a></li>
+    <li><a href="healing.html" style="color: green;">Healing</a></li>
+    <li><a href="sniper.html" style="color: yellow;">Arqueiro</a></li>
+  </ul>
+  
+  <h1>Selecione sua Classe</h1>
+
+  <tr>
+    <td>
+        <div class="carta1">
+          <video class="video-background" muted loop autoplay>
+            <source src="imagens/videowar.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="card-info"> <a href="guerreiro.html" style="color: white;">Guerreiro</a></p>
+        
+    </td>
+    <td>
+      <div class="carta2">
+        <video class="video-background" muted loop autoplay>
+          <source src="imagens/mago.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="card-info2"> <a href="maga.html" style="color: white;">Maga</a></p>
+      
+    </td>
+  </tr>
+<tr>
+  <td>
+    <div class="carta3">
+      <video class="video-background" muted loop autoplay>
+        <source src="imagens/healing.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="card-info3"> <a href="healing.html" style="color: white;">Healing</a></p>
+  </td>
+  <td>
+    <div class="carta4">
+      <video class="video-background" muted loop autoplay>
+        <source src="imagens/arqueiro.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="card-info4"> <a href="sniper.html" style="color: black;">Arqueiro</a></p>
+  </td>
+</tr>
+</table>
+</body>
+</html>
+

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arqueiro</title>
+<style>
+
+body{
+    background-image: url(imagens/arqueiro.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul {
+  border: 2px solid black; 
+  border-radius: 10px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, #a8a62f 0%, rgb(158, 158, 53) 35%, yellow 100%);
+  text-align: center; 
+}
+
+li {
+  display: inline-block; 
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: blck;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+
+}
+
+.active {
+  background-color: darkgoldenrod;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 350px;
+}
+
+.card {
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arqueirofogo1.jfif);
+  background-size: cover;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid red; 
+  border-radius: 10px;
+}
+
+.card:hover {
+  width: 400px;
+  height: 500px;
+  background: url(imagens/arqueirofogo2.jfif);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.card2 {
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arqueirogelo1.jfif);
+  background-size: cover;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid blue; 
+  border-radius: 10px;
+}
+
+.card2:hover {
+  width: 400px;
+  height: 500px;
+  background: url(imagens/arqueirogelo2.jfif);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.card3 {
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arqueirodark1.jfif);
+  background-size: cover;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid black; 
+  border-radius: 10px;
+}
+
+.card3:hover {
+  width: 400px;
+  height: 500px;
+  background: url(imagens/arqueirodark2.jfif);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.card-info {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  height: 170px;
+  background-color: rgb(252, 45, 45);
+  border: 2px solid black; 
+  border-radius: 10px; 
+  padding: 20px;
+}
+
+.card-info2 {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  height: 170px;
+  background-color: blue;
+  border: 2px solid black; 
+  border-radius: 10px; 
+  padding: 20px;
+}
+
+.card-info3 {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  height: 170px;
+  background-color: black;
+  border: 2px solid #555; 
+  border-radius: 10px; 
+  padding: 20px;
+}
+.arma{
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arma/arcofogo1.jfif);
+  background-size: cover;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid red; 
+  border-radius: 10px;
+}
+.arma:hover{
+  width: 400px;
+  height: 500px;
+  background: url(imagens/arma/arcofogo2.jfif);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.arma2{
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arma/arcogelo1.jfif);
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid blue; 
+  border-radius: 10px;
+}
+.arma2:hover{
+  width: 400px;
+  height: 500px;
+  background: url(imagens/arma/arcogelo2.jfif);
+  background-size:cover;
+  background-position: center;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.arma3{
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arma/arcodark1.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid black; 
+  border-radius: 10px;
+}
+.arma3:hover{
+  width: 400px;
+  height: 500px;
+  background: url(imagens/arma/arcodark2.jfif);
+  background-size:cover;
+  background-position: center;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.escudo{
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arma/sacofogo1.jfif);
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid red; 
+  border-radius: 10px;
+}
+
+.escudo:hover{
+width: 400px;
+height: 500px;
+background: url(imagens/arma/sacofogo2.jfif);
+background-size:cover;
+background-position: center;
+border: 2px solid #555; 
+border-radius: 10px;
+}
+
+.escudo2{
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arma/sacogelo1.jfif);
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid blue; 
+  border-radius: 10px;
+}
+
+.escudo2:hover{
+width: 400px;
+height: 500px;
+background: url(imagens/arma/sacogelo2.jfif);
+background-size:cover;
+background-position: center;
+border: 2px solid #555; 
+border-radius: 10px;
+}
+
+.escudo3{
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arma/arcodark3.jfif);
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid black; 
+  border-radius: 10px;
+}
+
+.escudo3:hover{
+width: 400px;
+height: 500px;
+background: url(imagens/arma/arcodark4.jfif);
+background-size:cover;
+background-position: center;
+border: 2px solid #555; 
+border-radius: 10px;
+}
+
+.centro {
+    border-collapse: collapse; 
+    margin-top: 50px;
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  .centro td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc; 
+  }
+  .centro img {
+    width: 220px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px; 
+  }
+  p {
+    border-style: outset;
+ }
+ h1{
+  color: black;
+  background-image: linear-gradient(90deg, #90a53d 0%, rgb(165, 165, 42) 35%, yellow 100%);
+  border: 2px solid white; 
+  border-radius: 10px;
+ }
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="guerreiro.html">Guerreiro</a></li>
+  <li><a href="maga.html">Maga</a></li>
+  <li><a  href="healing.html">Healing</a></li>
+  <li><a class="active"  href="sniper.html">Arqueiro</a></li>
+</ul>
+   <h1>Em um reino distante, nas profundezas da Floresta de Ébano, vive um arqueiro solitário chamado Eolande. Eolande é conhecido por sua habilidade incomparável com o arco e flecha, e por sua conexão misteriosa com a floresta.</h1>
+    
+   <table  border="0" cellspacing="2mm" aria-colspan="2" style="margin: auto; width: 50%;">
+    <tr>
+        <td>
+            <div class="card"></div>
+            <div class="card-info">
+              <p>Arqueiro de Fogo</p>
+              <p>Força: 5</p>
+              <p>Defesa: 6</p>
+              <p>Magia: 7</p>
+            </div>
+        </td>
+        <td>
+          <div class="arma"></div>
+          <div class="card-info">
+            <p>Arma</p>
+            <p>Força: 5</p>
+            <p>Defesa: 6</p>
+            <p>Magia: 7</p>
+          </div>
+        </td>
+        <td>
+          <div class="escudo"></div>
+          <div class="card-info">
+            <p>Arma Secundaria</p>
+            <p>Força: 5</p>
+            <p>Defesa: 6</p>
+            <p>Magia: 7</p>
+          </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+          <div class="card2"></div>
+          <div class="card-info2">
+            <p>Arqueiro de Gelo</p>
+            <p>Força: 5</p>
+            <p>Defesa: 6</p>
+            <p>Magia: 7</p>
+          </div>
+        </td>
+        <td>
+          <div class="arma2"></div>
+          <div class="card-info2">
+            <p>Arma</p>
+            <p>Força: 5</p>
+            <p>Defesa: 6</p>
+            <p>Magia: 7</p>
+          </div>
+        </td>
+        <td>
+          <div class="escudo2"></div>
+          <div class="card-info2">
+            <p>Arma secundaria</p>
+            <p>Força: 5</p>
+            <p>Defesa: 6</p>
+            <p>Magia: 7</p>
+          </div>
+        </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="card3"></div>
+        <div class="card-info3">
+          <p>Arqueiro dark</p>
+          <p>Força: 5</p>
+          <p>Defesa: 6</p>
+          <p>Magia: 7</p>
+        </div>
+      </td>
+      <td>
+        <div class="arma3"></div>
+        <div class="card-info3">
+          <p>Arma</p>
+          <p>Força: 5</p>
+          <p>Defesa: 6</p>
+          <p>Magia: 7</p>
+        </div>
+      </td>
+      <td>
+        <div class="escudo3"></div>
+        <div class="card-info3">
+          <p>Armar Secundaria</p>
+          <p>Força: 5</p>
+          <p>Defesa: 6</p>
+          <p>Magia: 7</p>
+        </div>
+      </td>
+  </tr>
+   
+</table>
+
+
+</body>
+</html>

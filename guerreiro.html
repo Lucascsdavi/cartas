@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerreiro</title>
+<style>
+
+body{
+    background-image: url(imagens/Guerreiro.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+ul {
+  border: 2px solid white; 
+  border-radius: 10px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, #020024 0%, darkblue 35%, blue 100%);
+  text-align: center; 
+}
+
+li {
+  display: inline-block; 
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+
+}
+
+.active {
+  background-color: darkblue;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 350px;
+}
+
+.card {
+  width: 400px;
+  height: 300px;
+  background: url(imagens/GuerreiroFogo1.jfif);
+  background-size: cover;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid red; 
+  border-radius: 10px;
+}
+
+.card:hover {
+  width: 400px;
+  height: 500px;
+  background: url(imagens/GuerreiroFogo2.jfif);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.card2 {
+  width: 400px;
+  height: 300px;
+  background: url(imagens/GuerreiroGelo1.jfif);
+  background-size: cover;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid blue; 
+  border-radius: 10px;
+}
+
+.card2:hover {
+  width: 400px;
+  height: 500px;
+  background: url(imagens/GuerreiroGelo2.jfif);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.card3 {
+  width: 400px;
+  height: 300px;
+  background: url(imagens/dark1.jfif);
+  background-size: cover;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid black; 
+  border-radius: 10px;
+}
+
+.card3:hover {
+  width: 400px;
+  height: 500px;
+  background: url(imagens/dark2.jfif);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.card-info {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  height: 170px;
+  background-image: linear-gradient(90deg, #020024 0%, darkred 35%, red 100%);
+  border: 2px solid black; 
+  border-radius: 10px; 
+  padding: 20px;
+}
+
+.card-info2 {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  height: 170px;
+  background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
+  border: 2px solid black; 
+  border-radius: 10px; 
+  padding: 20px;
+}
+
+.card-info3 {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  height: 170px;
+  background-image: linear-gradient(90deg, white 0%, rgb(39, 32, 32) 35%, black);
+  border: 2px solid #555; 
+  border-radius: 10px; 
+  padding: 20px;
+}
+.arma{
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arma/espadafogo1.jfif);
+  background-size: cover;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid red; 
+  border-radius: 10px;
+}
+.arma:hover{
+  width: 400px;
+  height: 500px;
+  background: url(imagens/arma/espadafogo2.jfif);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.arma2{
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arma/espadagelo1.jfif);
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid blue; 
+  border-radius: 10px;
+}
+.arma2:hover{
+  width: 400px;
+  height: 500px;
+  background: url(imagens/arma/espadagelo2.jfif);
+  background-size:cover;
+  background-position: center;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.arma3{
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arma/espadadark1.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid black; 
+  border-radius: 10px;
+}
+.arma3:hover{
+  width: 400px;
+  height: 500px;
+  background: url(imagens/arma/espadadark2.jfif);
+  background-size:cover;
+  background-position: center;
+  border: 2px solid #555; 
+  border-radius: 10px;
+}
+
+.escudo{
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arma/escudofogo1.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid red; 
+  border-radius: 10px;
+}
+
+.escudo:hover{
+width: 400px;
+height: 500px;
+background: url(imagens/arma/escudofogo2.jfif);
+background-size:cover;
+background-position: center;
+border: 2px solid #555; 
+border-radius: 10px;
+}
+
+.escudo2{
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arma/escudogelo1.jfif);
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid blue; 
+  border-radius: 10px;
+}
+
+.escudo2:hover{
+width: 400px;
+height: 500px;
+background: url(imagens/arma/escudogelo2.jfif);
+background-size:cover;
+background-position: center;
+border: 2px solid #555; 
+border-radius: 10px;
+}
+
+.escudo3{
+  width: 400px;
+  height: 300px;
+  background: url(imagens/arma/escudodark1.jfif);
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  transition:ease-in-out 0.5s;
+  border: 2px solid black; 
+  border-radius: 10px;
+}
+
+.escudo3:hover{
+width: 400px;
+height: 500px;
+background: url(imagens/arma/escudodark2.jfif);
+background-size:cover;
+background-position: center;
+border: 2px solid #555; 
+border-radius: 10px;
+}
+
+.centro {
+    border-collapse: collapse; 
+    margin-top: 50px;
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  .centro td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc; 
+  }
+  .centro img {
+    width: 220px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px; 
+  }
+  p {
+    border-style: outset;
+ }
+ h1{
+  color: white;
+  background-image: linear-gradient(90deg, #020024 0%, darkblue 35%, blue 100%);
+  border: 2px solid white; 
+  border-radius: 10px;
+ }
+
+ @media screen and (max-width: 500px) {
+  .card, .card2, .card3, .arma, .arma2 {
+  width: 300px;
+  height: 200px;
+ }
+ .card:hover, .card2:hover, .card3:hover, .arma:hover, .arma2:hover {
+    width: 300px;
+    height: 400px;
+  }
+  body {
+    background-image: url(imagens/Guerreiromobile.png);
+  }
+ 
+  ul, h1 {
+    max-width: 100%;
+  }
+  .tabela{
+    
+  }
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a class="active" href="guerreiro.html">Guerreiro</a></li>
+  <li><a href="maga.html">Maga</a></li>
+  <li><a href="healing.html">Healing</a></li>
+  <li><a href="sniper.html">Arqueiro</a></li>
+</ul>
+   <h1>Em um reino distante, nas terras altas de Draconia, nasceu um guerreiro chamado Thorgar, filho de um ferreiro. Thorgar cresceu ouvindo histórias de bravos guerreiros que lutaram contra as forças do mal para proteger o reino. Inspirado por essas histórias, ele decidiu seguir o caminho da espada.</h1>
+    
+   <table class="tabela" border="0" cellspacing="2mm" aria-colspan="2" style="margin: auto; width: 50%;">
+    <tr>
+        <td>
+            <div class="card"></div>
+            <div class="card-info">
+              <p>Cavaleiro de Fogo</p>
+              <p>Força: 5</p>
+              <p>Defesa: 6</p>
+              <p>Magia: 7</p>
+            </div>
+        </td>
+        <td>
+          <div class="arma"></div>
+          <div class="card-info">
+            <p>Arma</p>
+            <p>Força: 5</p>
+            <p>Defesa: 6</p>
+            <p>Magia: 7</p>
+          </div>
+        </td>
+        <td>
+          <div class="escudo"></div>
+          <div class="card-info">
+            <p>Arma secundaria</p>
+            <p>Força: 5</p>
+            <p>Defesa: 6</p>
+            <p>Magia: 7</p>
+          </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+          <div class="card2"></div>
+          <div class="card-info2">
+            <p>Cavaleiro de  Gelo</p>
+            <p>Força: 5</p>
+            <p>Defesa: 6</p>
+            <p>Magia: 7</p>
+          </div>
+        </td>
+        <td>
+          <div class="arma2"></div>
+          <div class="card-info2">
+            <p>Cavaleiro Dark</p>
+            <p>Força: 5</p>
+            <p>Defesa: 6</p>
+            <p>Magia: 7</p>
+          </div>
+        </td>
+        <td>
+          <div class="escudo2"></div>
+          <div class="card-info2">
+            <p>Cavaleiro Dark</p>
+            <p>Força: 5</p>
+            <p>Defesa: 6</p>
+            <p>Magia: 7</p>
+          </div>
+        </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="card3"></div>
+        <div class="card-info3">
+          <p>Cavaleiro Dark</p>
+          <p>Força: 5</p>
+          <p>Defesa: 6</p>
+          <p>Magia: 7</p>
+        </div>
+      </td>
+      <td>
+        <div class="arma3"></div>
+        <div class="card-info3">
+          <p>Cavaleiro Dark</p>
+          <p>Força: 5</p>
+          <p>Defesa: 6</p>
+          <p>Magia: 7</p>
+        </div>
+      </td>
+      <td>
+        <div class="escudo3"></div>
+        <div class="card-info3">
+          <p>Cavaleiro Dark</p>
+          <p>Força: 5</p>
+          <p>Defesa: 6</p>
+          <p>Magia: 7</p>
+        </div>
+      </td>
+  </tr>
+   
+</table>
+
+
+</body>
+</html>
